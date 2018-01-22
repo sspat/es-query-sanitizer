@@ -16,7 +16,7 @@ class Sanitizer
 
         $reservedCharacters = self::reservedCharacters($exclude);
 
-        return str_ireplace(
+        return str_replace(
             array_keys($reservedCharacters),
             $reservedCharacters,
             $query

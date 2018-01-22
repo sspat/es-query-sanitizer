@@ -27,6 +27,16 @@ class SanitizerTest extends TestCase
         $this->assertSame($expectedEscapedQuery, $escapedQuery);
     }
 
+    public function testLowercaseLogicOperatorsNotEscaped()
+    {
+        $unescapedQuery = 'and or not';
+        $expectedEscapedQuery = 'and\ or\ not';
+
+        $escapedQuery = Sanitizer::escape($unescapedQuery);
+
+        $this->assertSame($expectedEscapedQuery, $escapedQuery);
+    }
+
     public function testExceptionThrownIfArgumentNotString()
     {
         $this->expectException('\sspat\ESQuerySanitizer\SanitizerException');
