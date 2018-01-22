@@ -14,8 +14,6 @@ class SanitizerTest extends TestCase
         $escapedQuery = Sanitizer::escape($unescapedQuery);
 
         $this->assertSame($expectedEscapedQuery, $escapedQuery);
-
-        var_dump($escapedQuery);
     }
 
     public function testExcludedCharactersNotEscaped()
