@@ -2,7 +2,7 @@
     "name": "sspat/es-query-sanitizer",
     "description": "Simple helper class to sanitize ElasticSearch reserved characters from query strings",
     "type": "library",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "keywords": [
         "elasticsearch",
         "query",
